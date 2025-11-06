@@ -139,11 +139,8 @@ def main():
         </div>
         """, unsafe_allow_html=True)
         
-        # API key input (for testing - remove in production)
-        api_key = st.text_input("OpenAI API Key", type="password", 
-                               help="Get your API key from https://platform.openai.com/api-keys")
         if api_key:
-            os.environ["OPENAI_API_KEY"] = api_key
+            os.environ["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"] = api_key
         
         if st.button("Clear Conversation"):
             st.session_state.messages = [
